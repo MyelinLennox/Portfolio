@@ -1,19 +1,14 @@
+* {
+  cursor: none;
+}
+
+
 html {
   overflow:hidden;
   background: linear-gradient(#121416, #080808);
   text-align: center;
   height: 100%;
   width: 100%;
-}
-
-.Margin{
-  outline: 0.5px solid hsla(0, 0%, 100%, 0.5);
-  position: fixed;
-  z-index: 10;
-  left: 50px;
-  right: 50px;
-  top: 50px;
-  bottom: 50px;
 }
 
 body {
@@ -24,20 +19,50 @@ body {
   width: 100%;
 }
 
+.Margin {
+  outline: 0.5px solid hsla(0, 0%, 100%, 0.5);
+  position: fixed;
+  z-index: 10;
+  left: 50px;
+  right: 50px;
+  top: 50px;
+  bottom: 50px;
+  margin: 50px;
+}
+
 header {
   margin: 25px;
   font-family: 'Montserrat', Helvetica;
   font-weight: 200;
   color: white;
-  text-align:left;
-  font-size:xx-large;
+  text-align: left;
+  font-size: xx-large;
 }
 
 h1 {
   margin: 25px;
   font-family: 'Montserrat', Helvetica;
   font-weight: 50;
-  color:ghostwhite;
-  text-align:left;
-  font-size:medium;
+  color: ghostwhite;
+  text-align: left;
+  font-size: medium;
+  transition: margin 0.3s ease;
+}
+
+h1:hover{
+  color:rgba(248, 248, 255, 0.476);
+  margin-left: 50px;
+  transition: color .3s ease 100ms
+}
+
+.Cursor {
+  --circle-size: 30px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 1px solid white;
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
 }
