@@ -27,29 +27,30 @@ body {
   outline: 0.5px solid hsla(0, 0%, 100%, 0.5);
   position: fixed;
   z-index: 10;
-  left: 50px;
-  right: 50px;
-  top: 50px;
-  bottom: 50px;
-  margin: 50px;
+  left: 25px;
+  right: 25px;
+  top: 25px;
+  bottom: 25px;
+  margin: 25px;
 }
 
 header {
   margin: 25px;
+  margin-bottom: 50px;
   font-family: 'Montserrat', Helvetica;
   font-weight: 200;
   color: white;
   text-align: left;
-  font-size: xx-large;
+  font-size: 400%;
 }
 
 h1 {
   margin: 25px;
   font-family: 'Montserrat', Helvetica;
   font-weight: 50;
-  color: ghostwhite;
+  color: rgba(248, 248, 255, 0.621);
   text-align: left;
-  font-size: medium;
+  font-size: 200%;
   transition: margin 0.3s ease;
 }
 
