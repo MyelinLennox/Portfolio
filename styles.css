@@ -1,5 +1,9 @@
 * {
   cursor: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 
@@ -65,4 +69,6 @@ h1:hover{
   top: calc(var(--circle-size) / 2 * -1);
   left: calc(var(--circle-size) / 2 * -1);
   pointer-events: none;
+  transition: transform 0.025s ease; /* Smooth transition */
 }
+
