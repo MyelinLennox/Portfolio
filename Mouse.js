@@ -2,10 +2,9 @@
 
 // Select the circle element
 const CircleElement = document.querySelector('.Cursor');
-const SelectableElement = document.querySelectorAll('.Selectable')
+const SelectableElements = document.querySelectorAll('.Selectable')
 const TestElement = document.querySelectorAll('.Test');
 
-console.log(SelectableElement)
 // Create objects to track mouse position and custom cursor position
 const mouse = { x: 0, y: 0 }; // Track current mouse position
 const previousMouse = { x: 0, y: 0 } // Store the previous mouse position
@@ -18,18 +17,24 @@ let SelectionMultiplier = 1;
 let HoverMultiplier = 1;
 
 // Update mouse position on the 'mousemove' event
-window.addEventListener('mousemove', (e) => {
-  mouse.x = e.x;
-  mouse.y = e.y;
+window.addEventListener('mousemove', (i) => {
+  mouse.x = i.x;
+  mouse.y = i.y;
 });
 
 document.addEventListener("mousedown", function () {SelectionMultiplier = .75;});
 document.addEventListener("mouseup", function () {SelectionMultiplier = 1;});
 
-document.addEventListener("mouseover", function () {HoverMultiplier = 1.5;});
-document.addEventListener("mouseout", function () {HoverMultiplier = 1;});
 
+SelectableElements.forEach(CircleElement => {
+  CircleElement.addEventListener("mouseenter", function () {
+      HoverMultiplier = 1.25;
+  });
 
+  CircleElement.addEventListener("mouseleave", function () {
+      HoverMultiplier = 1;
+  });
+});
 
 // Smoothing factor for cursor movement speed (0 = smoother, 1 = instant)
 const speed = .4;
@@ -57,7 +62,7 @@ const tick = () => {
   // 4. Smoothly update the current scale
   currentScale += (scaleValue - currentScale) * speed;
   // Create a transformation string for scaling
-  const scaleTransform = `scale(${(1 + currentScale * HoverMultiplier) * SelectionMultiplier}, ${(1 - currentScale * HoverMultiplier) * SelectionMultiplier})`;
+  const scaleTransform = `scale(${((1 + currentScale) * SelectionMultiplier) * HoverMultiplier}, ${((1 - currentScale * HoverMultiplier) * SelectionMultiplier) * HoverMultiplier})`;
 
 
   // ROTATE
