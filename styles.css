@@ -41,7 +41,7 @@ header {
   font-weight: 200;
   color: white;
   text-align: left;
-  font-size: 400%;
+  font-size: 600%;
 }
 
 a {
@@ -51,7 +51,7 @@ a {
   font-weight: 50;
   color: rgba(248, 248, 255, 0.621);
   text-align: left;
-  font-size: 150%;
+  font-size: 300%;
   transition: margin 0.3s ease;
   text-decoration: none;
   display: flex;
@@ -77,3 +77,12 @@ a:hover{
   transition: transform 0.025s ease; /* Smooth transition */
 }
 
+.Pages {
+  width: 40%;
+  float: left;
+}
+
+.Visual {
+  width: 30%;
+  float: right;
+}
