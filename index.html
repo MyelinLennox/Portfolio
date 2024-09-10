@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myelinlennox.com</title>
-    <link rel="stylesheet" href="Style.css">
-    <!-- Reference the external JavaScript file -->
-    <script src="Shader.js" defer></script>
+    <title>Myelin Lennox's portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body class="Body">
-    <div class="Header">
-        <h1 class="Header">Loream Ipsum</h1>
-        <a class="Sub">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus mattis elit eu molestie...</a>
+    <div class="Margin">
+        <div class="Cursor" id="Cursor"></div>
+        <div class="Test" id="Test"></div>
+        <header>myelinlennox.com</header>
+        <a href="3dModeling.html" class="Selectable" id="Selectable">3D Modeling</a>
+        <a href="Programming.html" class="Selectable" id="Selectable">Programming</a>
+        <a href="GraphicDesign.html" class="Selectable" id="Selectable">Graphic Design</a>
     </div>
 
-    <!-- Your canvas element for WebGL shader -->
-    <canvas id="shaderCanvas" width="800" height="450"></canvas>
-
+    <script src="Mouse.js"></script>
+    <script src="CursorHide.js"></script>
 </body>
 </html>
